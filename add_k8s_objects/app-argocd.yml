@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: flask-web-application
+  namespace: argocd  
+spec:
+  project: default  
+  source:
+    repoURL: 'https://github.com/gatmbarz123/Panaya-project' 
+    targetRevision: HEAD 
+    path: 'kubernetes-bonus'
+  destination:
+    server: 'https://kubernetes.default.svc' 
+    namespace: default  
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
