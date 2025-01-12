@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default  
   source:
-    repoURL: 'https://github.com/gatmbarz123/Panaya-project' 
+    repoURL: 'https://github.com/gatmbarz123/try' 
     targetRevision: HEAD 
     path: 'kubernetes-bonus'
   destination:
