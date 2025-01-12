@@ -11,7 +11,7 @@ def connection_to_mysql():
 
 @app.route('/hello_world')
 def hello_world():
-    return "hello world"
+    return "hello 123 world"
 
 
 @app.route('/' ,methods=['GET'])
