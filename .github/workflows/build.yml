@@ -43,4 +43,4 @@ jobs:
           git config --global user.name "${{ secrets.USERNAME_GITHUB }}"
           git add ./kubernetes-bonus/flask-new-deployment.yml
           git commit -m "update image tag to ${{ github.sha }}"
-          git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }} --token ${{ secrets.MY_GITHUB_TOKEN }}
+          git push 
