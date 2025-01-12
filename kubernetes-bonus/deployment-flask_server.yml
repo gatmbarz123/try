@@ -17,6 +17,7 @@ spec:
       containers:
         - name: flask-web
           image: diskoproject/flask-web-1:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
               name: flask-port
