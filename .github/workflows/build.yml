@@ -34,13 +34,13 @@ jobs:
         run: |
           cd ./kubernetes-bonus
           # Update the image tag in your deployment.yaml
-          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/flask-web-1:${{ github.sha }}|" deployment-falsk_server.yml
+          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/flask-web-1:${{ github.sha }}|" flask-new-deployment.yml
 
           
       - name: Commit changes
         run: |
           git config --global user.email "${{ secrets.EMAIL_GITHUB }}"
           git config --global user.name "${{ secrets.USERNAME_GITHUB }}"
-          git add ./kubernetes-bonus/deployment-falsk_server.yml
+          git add ./kubernetes-bonus/flask-new-deployment.yml
           git commit -m "update image tag to ${{ github.sha }}"
           git push 
